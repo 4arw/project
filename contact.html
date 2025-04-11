@@ -1,0 +1,134 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - HealthMate</title>
+  <link rel="stylesheet" href="Home.css">
+  <style>
+    .contact-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      color: #0077cc;
+    }
+
+    .contact-section label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .contact-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-section input[type="submit"] {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-section input[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+
+    .social-media {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .social-media h3 {
+      margin-bottom: 15px;
+      color: #0077cc;
+    }
+
+    .social-media a {
+      display: inline-block;
+      margin: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .social-media img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+
+    .social-media a:hover {
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+        <span class="brand-small">HealthMate</span>
+      </div>
+      <div class="main-title">HealthMate</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="diet.html">Diet</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="gym.html">GYM</a>
+      <a href="watch.html">Watch</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <form action="https://httpbin.org/post" method="post">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+
+      <div class="social-media">
+        <h3>Follow and Contact Us on :</h3>
+        <a href="https://www.instagram.com/healthmate" target="_blank">
+          <img src="logo_1.png" alt="Instagram Logo">Instagram
+        </a>
+      
+        <a href="https://www.youtube.com/healthmate" target="_blank">
+          <img src="logo_3.png" alt="YouTube Logo">YouTube
+        </a>
+        <a href="mailto:healthmate@gmail.com">
+          <img src="logo_2.png" alt="Email Logo">healthmate@gmail.com
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMate Team. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Consultation - HealthMate</title>
+  <link rel="stylesheet" href="Home.css">
+  <style>
+    .consultation-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .consultation-section h2 {
+      color: #0077cc;
+    }
+
+    .consultation-section textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .consultation-section form {
+      margin-top: 20px;
+    }
+
+    .consultation-section label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .consultation-section select, .consultation-section input[type="text"], .consultation-section input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .consultation-section input[type="submit"], .consultation-section button {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .consultation-section input[type="submit"]:hover, .consultation-section button:hover {
+      background-color: #005fa3;
+    }
+
+    .choice-box {
+      margin-top: 30px;
+    }
+
+    .choice-box label {
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+        <span class="brand-small">HealthMate</span>
+      </div>
+      <div class="main-title">HealthMate</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="diet.html">Diet</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="gym.html">GYM</a>
+      <a href="watch.html">Watch</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="consultation-section">
+      <h2>Choose Your Consultation Type</h2>
+      <form id="consultChoiceForm">
+        <div class="choice-box">
+          <label><input type="radio" name="consultType" value="ai" required> AI Consultation (Free)</label>
+          <label><input type="radio" name="consultType" value="expert"> Expert Consultation (Paid)</label>
+        </div>
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+
+    <div class="consultation-section" id="aiSection" style="margin-top: 50px; display: none;">
+      <h2>Free AI Consultation</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <label for="aiQuestion">Type your health question below and receive instant suggestions from our AI assistant:</label>
+        <textarea id="aiQuestion" name="aiQuestion" placeholder="e.g., What is the best exercise for back pain?"></textarea>
+        <input type="submit" value="Submit Question">
+      </form>
+    </div>
+
+    <div class="consultation-section" id="expertSection" style="margin-top: 50px; display: none;">
+      <h2>Paid Expert Consultation</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="consultant">Choose a Consultant:</label>
+        <select name="consultant" id="consultant">
+          <option value="dr_noura">Dr. Noura Al-Kindi (Nutritionist)</option>
+          <option value="mr_salim">Mr. Salim Al-Balushi (Fitness Coach)</option>
+          <option value="dr_sara">Dr. Sara Al-Harthy (General Health)</option>
+          <option value="dr_omar">Dr. Omar Al-Mahrouqi (Orthopedic Surgeon)</option>
+          <option value="dr_layla">Dr. Layla Al-Harithi (Cardiologist)</option>
+          <option value="dr_khalid">Dr. Khalid Al-Farsi (Psychologist)</option>
+          <option value="dr_fatima">Dr. Fatima Al-Balushi (Pediatrician)</option>
+          <option value="dr_mohammed">Dr. Mohammed Al-Riyami (Dentist)</option>
+          <option value="dr_najwa">Dr. Najwa Al-Harthy (Dermatologist)</option>
+        </select>
+
+        <input type="submit" value="Book Consultation">
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMate Team. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to show/hide consultation sections
+    document.getElementById("consultChoiceForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const type = document.querySelector('input[name="consultType"]:checked').value;
+      if (type === "ai") {
+        document.getElementById("aiSection").style.display = "block";
+        document.getElementById("expertSection").style.display = "none";
+      } else {
+        document.getElementById("aiSection").style.display = "none";
+        document.getElementById("expertSection").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

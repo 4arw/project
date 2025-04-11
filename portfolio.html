@@ -1,0 +1,196 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HealthMate - Your Info</title>
+  <link rel="stylesheet" href="Home.css">
+  <style>
+    .form-section {
+      background-color: #ffffff;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Toggle Style */
+    .toggle-section {
+      display: none;
+    }
+
+    .section-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-section:checked + .section-label .arrow {
+      transform: rotate(90deg);
+    }
+
+    .content {
+      display: none;
+      padding: 10px 0 0 10px;
+    }
+
+    .toggle-section:checked + .section-label + .content {
+      display: block;
+    }
+
+    .info-display p {
+      margin: 5px 0;
+    }
+
+    .edit-toggle {
+      display: none;
+    }
+
+    .info-edit {
+      display: none;
+    }
+
+    .edit-toggle:checked ~ form .info-display {
+      display: none;
+    }
+
+    .edit-toggle:checked ~ form .info-edit {
+      display: block;
+    }
+
+    .edit-label {
+      display: inline-block;
+      margin-top: 20px;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+      </div>
+      <div class="main-title">Portfolio</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="diet.html">Diet</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="gym.html">GYM</a>
+      <a href="watch.html">Watch</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <main>
+    <section class="form-section">
+      <input type="checkbox" id="editToggle" class="edit-toggle">
+      
+      <form action="#" method="post">
+        
+        <!-- Section 1 -->
+        <input type="checkbox" id="toggle1" class="toggle-section">
+        <label for="toggle1" class="section-label">
+          <span>Your Personal Information</span>
+          <span class="arrow">&#9654;</span>
+        </label>
+        <div class="content info-display">
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Age:</strong> 30</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Weight:</strong> 70</p>
+          <p><strong>Height:</strong> 175</p>
+          <p><strong>Phone Number:</strong> 123-456-7890</p>
+          <p><strong>Email:</strong> john@example.com</p>
+        </div>
+
+        <!-- Section 2 -->
+        <input type="checkbox" id="toggle2" class="toggle-section">
+        <label for="toggle2" class="section-label">
+          <span>Your Activity</span>
+          <span class="arrow">&#9654;</span>
+        </label>
+        <div class="content info-display">
+          <p><strong>Sleeping Hours:</strong> 7</p>
+          <p><strong>Steps:</strong> 10000</p>
+          <p><strong>Heart pass:</strong> 88</p>
+          <p><strong>Medication:</strong> nothing</p>
+          <p><strong>Body Measurement:</strong> 175</p>
+          <p><strong>Mental Well-being:</strong> Excellent</p>
+          <p><strong>Nutrition:</strong> Good</p>
+          <p><strong>Respiratory:</strong> Not bad</p>
+        </div>
+
+        <!-- Section 3 -->
+        <input type="checkbox" id="toggle3" class="toggle-section">
+        <label for="toggle3" class="section-label">
+          <span>Other Data</span>
+          <span class="arrow">&#9654;</span>
+        </label>
+        <div class="content info-display">
+          <p><strong>Blood Alcohol Content:</strong> 0%</p>
+          <p><strong>Handwashing:</strong> 3</p>
+          <p><strong>Temperature:</strong> 37</p>
+          <p><strong>Time in Daylight:</strong> 7 hours</p>
+        </div>
+
+        <!-- Edit Form -->
+        <div class="info-edit">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value="John Doe">
+
+          <label for="age">Age:</label>
+          <input type="number" name="age" id="age" value="30">
+
+          <label for="gender">Gender:</label>
+          <input type="text" name="gender" id="gender" value="Male">
+
+          <label for="weight">Weight:</label>
+          <input type="number" name="weight" id="weight" value="70">
+
+          <label for="height">Height:</label>
+          <input type="number" name="height" id="height" value="175">
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" name="phone" id="phone" value="123-456-7890">
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" value="john@example.com">
+
+          <input type="submit" value="Submit Info" class="submit-btn">
+        </div>
+
+        <label for="editToggle" class="edit-label">Edit Information</label>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMate Team. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

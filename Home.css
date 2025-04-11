@@ -1,0 +1,97 @@
+/* General page styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-image: url('background.jpg');
+  background-position: center;      /* center image horizontally and vertically */
+  background-repeat: no-repeat;     /* no tiling */
+  background-size: cover;           /* fully covers the header area */
+  color: white;
+  padding: 80px 30px 30px 30px;     /* a bit more padding for space */
+}
+
+
+/* Top bar with logo and title */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  ;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.brand-small {
+  font-size: 0.6rem;
+  margin-left: 10px;
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  color: rgb(138, 167, 203);
+}
+
+/* Navigation styles */
+nav {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Hyperlink states */
+nav a:link { color: white; }
+nav a:visited { color: #ddd; }
+nav a:hover { color: #9576bc; text-decoration: underline; }
+nav a:active { color: #82668f; }
+
+/* Main section */
+main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #3e6891;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
